@@ -6,9 +6,9 @@ const MapComponent = () => {
 
     setTimeout(() => {
         setProducts([
-            {id: 1, name:'Vestido', description: 'string', stock:'number'},
-            {id: 2, name:'Sweater', description: 'string', stock:'number'},
-            {id: 3, name:'Remera', description: 'string', stock:'number'}
+            {id: 1, name:'Vestido', description: 'vestido', stock:'1'},
+            {id: 2, name:'Sweater', description: 'sweater', stock:'2'},
+            {id: 3, name:'Remera', description: 'remera', stock:'1'}
         
         ])
     }, 5000)
