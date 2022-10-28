@@ -1,7 +1,9 @@
 import './ItemListContainer.css';
 import Container  from 'react-bootstrap/Container';
-import { useEffect, useState, useParams } from 'react';
-import { getProduct } from '../../utilis/products';
+import { useEffect, useState } from 'react';
+import ItemList from './itemList';
+import { useParams } from 'react-router-dom';
+import { getAllProducts } from '../../utilis/products';
 
 
 const ItemListContainer = ({ greeting }) => {
@@ -10,10 +12,10 @@ const ItemListContainer = ({ greeting }) => {
 
     useEffect(() => {
         console.log(categoryName)
-    }, {categoryName})
+    }, [categoryName])
 
     useEffect(() => {
-        getProduct()
+        getAllProducts()
         .then((data) => setProducts(data))
         .catch((error) => console.warn(error))
 
@@ -23,7 +25,7 @@ const ItemListContainer = ({ greeting }) => {
         <Container>
         <h1> Productos </h1>
         <h3 className="greeting">{greeting}</h3>
-        <itemList products= {products}/>
+        <ItemList products= {products}/>
 
         </Container>
     );

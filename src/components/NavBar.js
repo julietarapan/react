@@ -1,12 +1,14 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import CartWidget from "./CartWidget/CartWidget";
 import  "./CartWidget/CartWidget.css";
+
+
 const NavBar = () => {
     return (
-        <Navbar bg="dark">
+        <Navbar bg="white">
           <Container>
           <Navbar.Brand href="#home">
-            Tienda  
+            Tienda Las Rapan
           </Navbar.Brand>
            <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
